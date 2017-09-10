@@ -56,12 +56,12 @@ Membawa satu berkas ke lokasi saat ini dari simpanan
 
 ---
 
-Menerapkan berkas tambalan (.diff atau .patch) ke dalam repo
+Menerapkan berkas tambalan (.diff atau .patch) ke dalam repositori
 
 `$ git apply <patch file>`
 
 ## Perintah log
 
-Mendandani riwayat log sebuah git
+Memperbaiki riwayat log sebuah git
 
 `$ git log --pretty=oneline`

@@ -1,7 +1,7 @@
 ---
 layout: cheat-sheet
 title: Buku Saku Git GitHub
-byline: Git adalah sistem manajemen revisi terdistribusi bersifat terbuka yang menyediakan aktivitas GitHub di laptop atau komputer pribadi Anda. Buku saku ini meringkas baris perintah instruksi-instruksi Git yang paling sering dipakai sebagai referensi singkat.
+byline: Git adalah sistem manajemen revisi terdistribusi bersifat terbuka yang menyediakan aktivitas GitHub di laptop atau komputer pribadi Anda. Buku saku ini meringkas baris instruksi-instruksi Git yang paling sering dipakai sebagai referensi singkat.
 leadingpath: ../
 ---
 
@@ -25,14 +25,14 @@ Konfigurasi informasi pengguna untuk semua repositori lokal
 
 ```$ git config --global user.name "[nama]"```
 
-Menata nama yang ditautkan dalam pencatatan _commit_ Anda
+Menetapkan nama yang ditautkan dalam pencatatan _commit_ Anda
 
 ```$ git config --global user.email "[alamat surel]"```
 
-Menata alamat pos-el yang ditautkan dalam pencatatan _commit_ Anda
+Menata alamat surel yang ditautkan dalam pencatatan _commit_ Anda
 
 ## Buat repositori
-Memulai repositori baru atau mengambilnya dari tautan yang sudah ada
+Memulai repositori baru atau mengambil dari tautan yang sudah ada
 
 ```$ git init [nama-proyek]```
 
@@ -41,7 +41,6 @@ Membuat repositori lokal dengan nama tertentu
 ```$ git clone [url]```
 
 Unduh sebuah proyek dan seluruh riwayat revisinya
-
 {% endcapture %}
 <div class="col-md-6">
 {{ colOne | markdownify }}
@@ -55,7 +54,7 @@ Tinjau suntingan dan daftarkan _commit_
 
 ```$ git status```
 
-Daftar semua berkas yang baru dibuat atau telah dimodifikasi dan akan didaftarkan dalam bentuk _commit_
+Daftar semua berkas yang baru dibuat atau telah dimodifikasi akan didaftarkan dalam bentuk _commit_
 
 ```$ git diff```
 
@@ -67,7 +66,7 @@ Rekam berkas untuk didaftarkan ke dalam _commit_
 
 ```$ git diff --staged```
 
-Menunjukkan perbedaan file antara hasil revisi dan versi berkas terakhir yang terdaftar
+Menunjukkan perbedaan berkas antara hasil revisi dengan versi berkas terakhir yang terdaftar
 
 ```$ git reset [berkas]```
 
@@ -78,7 +77,7 @@ Batal merevisi berkas, namun tetap mempertahankan isinya
 Daftarkan perubahan berkas secara permanen di riwayat revisi
 
 ## Perubahan untuk banyak berkas
-Namai serangkaian _commit_ dan gabungkan upaya pengubahan jadi satu
+Beri nama serangkaian _commit_ dan gabungkan upaya pengubahan menjadi satu
 
 ```$ git branch```
 
@@ -94,7 +93,7 @@ Berpindah ke cabang tertentu dan perbarui direktori yang sedang dikerjakan
 
 ```$ git merge [nama-cabang]```
 
-Menggabungkan riwayat cabang tertentu ke dalam cabang yang sedang dipakai
+Menggabungkan riwayat cabang tertentu ke dalam cabang yang sedang digunakan
 
 ```$ git branch -d [nama-cabang]```
 
@@ -107,8 +106,9 @@ Hapus cabang tertentu
 
 
 {% capture colThree %}
+
 ## Pergantian nama berkas
-Relokasi dan menghapus berkas terevisi
+Relokasi dan menghapus berkas revisi
 
 ```$ git rm [berkas]```
 
@@ -120,7 +120,7 @@ Menghapus berkas dari riwayat revisi dengan tetap mempertahankan berkas lokal
 
 ```$ git mv [berkas-asli] [berkas-baru]```
 
-Mengganti nama berkas dan mempersiapkan berkas untuk pendaftaran _commit_
+Mengganti nama berkas dan menyiapkan berkas untuk pendaftaran _commit_
 
 ## Tahan pelacakan
 Mengabaikan berkas dan jalur untuk sementara
@@ -160,8 +160,10 @@ Membuang koleksi perubahan yang paling baru disimpan
 {{ colThree | markdownify }}
 </div>
 
+
 {% capture colFour %}
-## riwayat ulasan
+
+## Riwayat ulasan
 Jelajah dan periksa perkembangan berkas-berkas dalam proyek
 
 ```$ git log```
@@ -174,22 +176,22 @@ Daftar riwayat revisi untuk sebuah berkas, termasuk pergantian namanya
 
 ```$ git diff [cabang-pertama]...[cabang-kedua]```
 
-Menunjukkan perbedaan konten antar dua cabang
+Menunjukkan perbedaan konten diantara dua cabang
 
 `` `$ git show [commit]` ``
 
-Mennampilkan perubahan konten dan metadata yang terdaftar dalam sebuah komit
+Menampilkan perubahan isi dan metadata yang terdaftar dalam sebuah _commit_
 
 ## Lakukan _commit_ kembali
 Menghapus kesalahan dan buat riwayat penggantian
 
 `` `$ git reset [commit]` ``
 
-Membatalkan semua _commit_ setelah `[commit]`, dengan melestarikan perubahan lokal
+Membatalkan semua _commit_ setelah `[commit]`, dengan menerapkankan perubahan lokal
 
 `` `$ Git reset --hard [commit]` ``
 
-Membuang semua riwayat dan perubahan sampai di titik yang ditentukan oleh _commit_
+Membuang semua riwayat dan perubahan sampai pada titik yang telah ditentukan oleh _commit_
 
 ## Sinkronisasi perubahan
 Daftar (tautan) remot dan perbarui riwayat repositori
